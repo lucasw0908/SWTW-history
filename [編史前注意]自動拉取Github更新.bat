@@ -27,6 +27,8 @@ if %errorlevel% equ 0 (
     echo [INFO] You are up to date with origin/v4.
 ) else (
     echo [INFO] Updating from origin/v4...
+    git reset --hard
+    git clean -fd
     git pull --rebase origin v4
     echo [INFO] Update complete.
 )
