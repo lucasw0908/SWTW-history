@@ -23,7 +23,7 @@ REM Long hand fishing...
 git fetch >nul 2>&1
 
 REM CHECKING UPDATE...
-git diff --quiet origin/main
+git diff --quiet v4
 if %errorlevel% equ 0 (
     echo [MSG] Newest version, you good
 ) else (
