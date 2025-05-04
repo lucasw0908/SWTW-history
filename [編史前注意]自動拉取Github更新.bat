@@ -1,35 +1,34 @@
 @echo off
-echo === Updating ===
+echo === Checking for updates ===
 
-REM dict checking...
 cd /d %~dp0
 
-REM Git exist?
+REM Check Git installed
 where git >nul 2>nul
 if %errorlevel% neq 0 (
-    echo [Error] No Git, fxxk you: https://git-scm.com/downloads
+    echo [ERROR] Git is not installed. Please install from: https://git-scm.com/downloads
     pause
     exit /b 1
 )
 
-REM git repo/.git exist?
+REM Check .git exists
 if not exist ".git" (
-    echo [Error] Ask Farmertree8 why .git not exist
+    echo [ERROR] No .git directory found. Are you in a Git repo?
     pause
     exit /b 1
 )
 
-REM Long hand fishing...
+REM Fetch latest info from origin
 git fetch >nul 2>&1
 
-REM CHECKING UPDATE...
-git diff --quiet v4
+REM Check if current branch is up to date with origin/v4
+git diff --quiet HEAD origin/v4
 if %errorlevel% equ 0 (
-    echo [MSG] Newest version, you good
+    echo [INFO] You are up to date with origin/v4.
 ) else (
-    echo [UPDATE] Syncing...
-    git pull --rebase
-    echo [MSG] Synced! good to go.
+    echo [INFO] Updating from origin/v4...
+    git pull --rebase origin v4
+    echo [INFO] Update complete.
 )
 
 pause
