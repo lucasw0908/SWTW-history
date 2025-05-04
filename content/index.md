@@ -1,6 +1,8 @@
 ---
-title: Welcome to Quartz
+title: 校際交流群編年史
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+> 風簷展書讀，古道照顏色
+> ----文天祥《正氣歌》
+
+[[校際交流群正史]] [[校際交流群野史、雜史、趣聞]] [[人物傳記]]
