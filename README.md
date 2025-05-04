@@ -1,16 +1,17 @@
-# 校際交流群編年史SWTW-History專案操作說明 (for Windows 使用者)
+# 校際交流群編年史SWTW-History專案操作說明
+(for Windows 使用者)
 
 > 📘 本專案使用 [Quartz](https://github.com/jackyzha0/quartz) + Git 管理 Obsidian 筆記資料，並透過 GitHub 同步更新內容。
 
 **以下內容是給需要大量長期編輯的史官，若你不打算如此，請創立issue並貼上你欲更正的內容。**
 
 以下是部屬本資料庫的簡易步驟：
-1. 申請Github帳號、安裝Git並加以登入
-2. 與Farmertree8索取資料庫編輯權
-3. 安裝https://nodejs.org/
+1. 申請 Github 帳號、安裝 Git 桌面並加以登入
+2. 與 Farmertree8 索取資料庫編輯權
+3. 安裝 https://nodejs.org/
 4. 執行`必要套件與環境檢查.bat`
 5. 執行`[編史前注意]自動拉取Github更新.bat`
-6. 在Obsidian 筆記內選取`content`當作Vault/保險庫
+6. 在 Obsidian 筆記內選取 SWTW-History 當作Vault/保險庫
 
 你說你看不懂? 請你往下讀吧~
 
@@ -22,8 +23,7 @@
 | `LICENSE.txt`                            | 授權資訊（可忽略）。 |
 | `README.md`                            | 應讀文件（本文件）。 |
 | `[編史前注意]自動拉取Github更新.bat`      | 每次修改前**請先執行此檔案更新**，以免覆蓋他人最新版本。 |
-| `同步Quartz文件到專案.txt`               | 修改完後用CMD執行裡面文字，會將檔案同步。 |
-| `同步Quartz文件到雲端.bat`               | 修改完後執行，會將檔案上傳到 GitHub。 |
+| `同步Quartz文件.bat`               | 修改完後點選執行，會將檔案同步。 |
 | `必要套件與環境檢查.bat`                 | **第一次使用前**請先執行，檢查是否安裝好 `Git` 和 `Node.js`。 |
 
 ---
@@ -71,23 +71,18 @@
 
 ## ✍️ 編輯筆記
 
-1. 開啟 Obsidian，選擇 `content/` 作為你的 Vault。
+1. 開啟 Obsidian，選擇母資料夾 `SWTW-history` 作為你的 Vault。
 2. 開始自由編輯、補充內容！
 
 ---
 
 ## 📤 修改完成後，上傳同步
 
-關閉Obsidian後，請執行：(點資料夾那欄輸入cmd打開指令視窗)
+關閉Obsidian後，請執行：
 
-```
-npx quartz sync
-```
-等待結束後，再執行
 ```bat
-同步Quartz文件到雲端.bat
+同步Quartz文件.bat
 ```
-
 
 它會執行以下步驟：
 
@@ -113,6 +108,6 @@ For assistance or inquiries, please contact Discord user `@Farmertree8`, reach o
 筆記管理採用 [Obsidian](https://obsidian.md/)，其軟體本身為免費提供個人使用，並依其[官方條款](https://obsidian.md/eula)授權。
 - 本專案的靜態網站生成器採用 [Quartz](https://github.com/jackyzha0/quartz)，依據 [MIT 授權條款](https://opensource.org/licenses/MIT) 使用與修改，特此致謝開發者 [Jacky Zhao](https://jacky.zhao.ca)。
 - 此文件部分由OpenAI生成。
-- 所有透過 GitHub 協作平台提交的筆記與內容（Push、PR 等），將視為 **開放授權給本專案及其未來發展用途使用**，原作者擁有原始內容著作權。若需引用、改編、重製內容，請註明出處或作者 ID（若有署名，未屬名請註明本Github repo。）。
+- 所有透過 GitHub 協作平台提交的筆記與內容（Push、PR 等），將視為 **開放授權給本專案及其未來發展用途使用**，原作者擁有原始內容著作權。若需引用、改編、重製內容，請註明出處或作者 ID（若有署名，未屬名請註明本Github repo）。
 
 請以尊重為基礎進行貢獻，共建知識檔案，亦歡迎協作者於筆記中留下署名或貢獻紀錄。
