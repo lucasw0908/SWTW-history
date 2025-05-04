@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "zh-TW",
-    baseUrl: "https://farmertree8.github.io/SWTW-history/",
+    baseUrl: "https://farmertree8.github.io/SWTW-history/首頁",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
